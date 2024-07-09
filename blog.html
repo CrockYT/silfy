@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Silfy</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/blog.css">
+    <script src="js/main.js" defer></script>
+    <script src="js/blog.js" defer></script>
+    <link rel="shortcut icon" href="assets/images/icon.jpg" type="image/x-icon">
+    <link rel="apple-touch-icon" href="assets/images/icon.jpg" sizes="180x180">
+    <link rel="icon" type="image/png" href="assets/images/icon.jpg" sizes="192x192">
+</head>
+<body>
+    <div class="loader"></div>
+    <div class="scroll-box">
+        <div class="scroll-content"></div>
+    </div>
+    <div class="content">
+        <header>
+            <h1>Blog</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="command.html">Command</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <input type="text" id="search-date" placeholder="ブログ検索">
+                <div id="blog-list">
+                    <!-- テンプレート記事 -->
+                    <div class="blog-post" data-id="1">
+                        <h3>サイトの制作</h3>
+                        <p>2024-07-09</p>
+                        <p>このサイトをパパっと作って一旦公開します</br>これからいい感じに更新していくんでよろしく</p>
+                    </div>
+                    <!-- その他の記事 -->
+                </div>
+
+            <div id="overlay" class="overlay">
+                <div class="overlay-content">
+                    <button id="close-overlay" class="close-btn">✕</button>
+                    <button id="prev-btn" class="nav-btn">←</button>
+                    <button id="next-btn" class="nav-btn">→</button>
+                    <div id="overlay-article" class="article-content"></div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <p>2024©Silfy | <a href="privacy.html">プライバシポリシー</a></p>
+        </footer>
+    </div>
+</body>
+</html>

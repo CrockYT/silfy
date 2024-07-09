@@ -1,0 +1,173 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    background-image: url('assets/images/background-texture.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* ナビゲーションバーのスタイル */
+header {
+    background-color: rgba(31, 31, 31, 0.8); /* 背景色を半透明に設定 */
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #333;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 40px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px; /* フォントサイズを大きく */
+    padding: 12px 20px; /* パディングを調整 */
+    transition: background-color 0.3s, color 0.3s; /* ホバー時のアニメーションを追加 */
+}
+
+nav ul li a:hover {
+    background-color: #10151d;
+    color: #ffffff; /* ホバー時のテキスト色を白に変更 */
+}
+
+
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+/* フッターのスタイル */
+footer {
+    background-color: #1f1f1f;
+    text-align: center;
+    padding: 10px 0;
+    border-top: 1px solid #333;
+    position: fixed; /* フッターを固定位置に設定 */
+    bottom: 0;
+    width: 100%;
+}
+
+button {
+    background-color: #3b5998;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #5b79b8;
+    transform: scale(1.05);
+}
+
+.command {
+    background-color: #2c2c2c;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.command:hover {
+    background-color: #3b3b3b;
+    transform: translateY(-5px);
+}
+
+h1, h2, h3 {
+    font-weight: 300;
+}
+
+p {
+    line-height: 1.6;
+}
+
+/* ロードアニメーション */
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #121212;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+.loader.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader::before {
+    content: '';
+    border: 6px solid #ffffff;
+    border-top: 6px solid #3b5998;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* フェードインアニメーション */
+body.loaded {
+    opacity: 1;
+}
+
+/* 全体のスクロールバー */
+::-webkit-scrollbar {
+    width: 10px; /* 幅 */
+    background-color: #1f1f1f; /* 背景色 */
+}
+
+/* スクロールバーのトラック（動く部分） */
+::-webkit-scrollbar-track {
+    background-color: #1f1f1f;
+}
+
+/* スクロールバーのつまみ（ドラッグ可能な部分） */
+::-webkit-scrollbar-thumb {
+    background-color: #3b5998; /* つまみの色 */
+    border-radius: 5px; /* つまみの角丸 */
+}
+
+/* スクロールバーのつまみのホバー時のスタイル */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #5b79b8; /* ホバー時の色 */
+}
+
+/* スクロールバーのコーナー */
+::-webkit-scrollbar-corner {
+    background-color: #1f1f1f;
+}

@@ -1,0 +1,37 @@
+/* privacy.html専用のスタイル */
+.toggle-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.toggle-buttons button {
+    background-color: #3b5998;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.toggle-buttons button:hover {
+    background-color: #5b79b8;
+    transform: scale(1.05);
+}
+
+#privacy-policy, #terms-of-use {
+    background-color: #2c2c2c;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+#privacy-policy h2, #terms-of-use h2 {
+    color: #3b5998;
+    margin-top: 0;
+}
+
+#privacy-policy p, #terms-of-use p {
+    line-height: 1.6;
+}

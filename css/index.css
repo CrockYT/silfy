@@ -1,0 +1,22 @@
+/* index.html専用のスタイル */
+#introduction {
+    margin-bottom: 20px;
+}
+
+#commands, #updates {
+    margin-bottom: 20px;
+}
+
+body {
+    text-align: center;
+}
+
+h2 {
+    color: #3b5998;
+    font-size: 2.2em;
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.6em;
+}
