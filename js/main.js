@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
         { name: 'rolePanel', description: 'ロールを取得できるパネルを作成します' },
         { name: 'userInfo', description: 'ユーザーの情報を表示します' },
         { name: 'admin mode', description: '※Bot管理者専用 | Botのモードを選択します' },
+        { name: 'role create', description: 'ロールの作成コマンド | めっちゃBeta版'},
         // ここに他のコマンドを追加
     ];
 
