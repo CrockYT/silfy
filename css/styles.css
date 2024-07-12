@@ -171,3 +171,13 @@ body.loaded {
 ::-webkit-scrollbar-corner {
     background-color: #1f1f1f;
 }
+
+/* visitedリンクの色を青に変更 */
+:visited {
+    color: rgb(223, 223, 223);
+}
+
+/* 他のリンクスタイルも設定できます */
+:link {
+    color: black; /* 未訪問リンクの色 */
+}

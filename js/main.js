@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const commandList = document.getElementById('command-list');
 
     const commands = [
+        { name: 'roll', description: '指定した数値の中でランダムで数字を出します'},
         { name: 'temp-voice setup', description: '一時使用可能なボイスチャンネルのセットアップを実行します' },
         { name: 'moderate deletion', description: '指定分のメッセージを削除します' },
         { name: 'moderate nuke', description: '同チャンネルのメッセージを全て削除します' },
