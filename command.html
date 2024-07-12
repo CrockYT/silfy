@@ -6,7 +6,6 @@
     <title>コマンド一覧 - Silfy</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/command.css">
-    <script src="js/main.js" defer></script>
     <script src="js/command.js" defer></script>
     <link rel="shortcut icon" href="assets/images/icon.jpg" type="image/x-icon">
     <link rel="apple-touch-icon" href="assets/images/icon.jpg" sizes="180x180">
@@ -27,6 +26,12 @@
         </header>
         <main>
             <input type="text" id="search" placeholder="コマンドを検索">
+            <div id="categories">
+                <button class="category-btn active" data-category="all">すべて</button>
+                <button class="category-btn" data-category="moderation">管理</button>
+                <button class="category-btn" data-category="utility">その他</button>
+                <!-- 追加のカテゴリーボタン -->
+            </div>
             <div id="command-list">
                 <!-- コマンドリストをここに追加 -->
             </div>

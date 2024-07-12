@@ -9,6 +9,30 @@
     color: #ffffff;
 }
 
+#categories {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.category-btn {
+    background-color: #3b3b3b;
+    color: #ffffff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.category-btn.active {
+    background-color: #222222;
+}
+
+.category-btn.active:hover {
+    background-color: #5a5a5a;
+}
+
 #command-list {
     display: flex;
     flex-direction: column;
