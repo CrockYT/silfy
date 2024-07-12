@@ -24,6 +24,8 @@
     padding: 10px;
     border-radius: 5px;
     transition: background-color 0.3s, transform 0.3s;
+    cursor: pointer;
+    user-select: none; /* デフォルトで選択不可 */
 }
 
 .command:hover {
@@ -38,4 +40,19 @@
 
 .command p {
     margin: 5px 0 0;
+}
+
+.command-details {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    margin-top: 10px;
+}
+
+.command-details.active {
+    max-height: 100px; /* 必要に応じて適切な高さに調整 */
+}
+
+.selectable {
+    user-select: text; /* 選択可能に設定 */
 }
