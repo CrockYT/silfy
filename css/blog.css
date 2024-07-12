@@ -1,3 +1,5 @@
+/* blog.css */
+
 /* 検索ボックスのスタイル */
 #search-date {
     width: 100%;
@@ -40,10 +42,15 @@
 }
 
 .excerpt {
-    max-height: 50px;
+    max-height: 3.6em; /* 2行分の高さ */
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+}
+
+.blog-post.expanded .excerpt {
+    max-height: none;
+    white-space: normal;
 }
 
 .read-more {
@@ -115,7 +122,7 @@
     cursor: pointer;
     position: absolute;
     top: 50%;
-    transform: translateY(-5%);
+    transform: translateY(-50%);
 }
 
 #prev-btn {

@@ -1,3 +1,5 @@
+// blog.js
+
 // 検索ボックスの要素を取得
 const searchBox = document.getElementById('search-date');
 
@@ -51,12 +53,16 @@ document.addEventListener('DOMContentLoaded', function() {
     function showOverlay() {
         const post = posts[currentPostIndex];
         const title = post.querySelector('h3').innerText;
-        const date = post.querySelector('p').innerText;
-        const content = post.querySelector('p + p').innerText;
+        const date = post.querySelector('p:nth-of-type(1)').innerText;
+        const content = post.querySelector('p:nth-of-type(2)').innerText;
 
-        overlayArticle.innerHTML = `<h3 class="blog-title">${title}</h3><p class="blog-content">${date}</p><p class="blog-content">${content}</p>`;
+        overlayArticle.innerHTML = `
+            <h3 class="blog-title">${title}</h3>
+            <p class="blog-content">${date}</p>
+            <p class="blog-content full-content">${content}</p>
+        `;
         overlay.classList.add('show');
-        
+
         prevBtn.style.display = currentPostIndex > 0 ? 'block' : 'none';
         nextBtn.style.display = currentPostIndex < posts.length - 1 ? 'block' : 'none';
     }
