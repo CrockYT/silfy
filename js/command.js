@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const content = document.querySelector('.content');
 
     const commands = [
+        { name: 'help', description: 'Botのコマンド情報とか色々入れます', usage: '例: /help', category: 'utility' },
         { name: 'roll', description: '指定した数値の中でランダムで数字を出します', usage: '例: /roll 10', category: 'utility' },
         { name: 'temp-voice setup', description: '一時使用可能なボイスチャンネルのセットアップを実行します', usage: '例: /temp-voice setup', category: 'utility' },
         { name: 'moderate deletion', description: '指定分のメッセージを削除します', usage: '例: /moderate deletion 10', category: 'moderation' },
@@ -14,10 +15,10 @@ document.addEventListener('DOMContentLoaded', function() {
         { name: 'config default-role', description: '自動ロールのコンフィグです', usage: '例: /config default-role', category: 'moderation' },
         { name: 'config add default-role', description: '鯖に入ったときに自動で付けるロールを設定できます', usage: '例: /config add default-role @member', category: 'moderation' },
         { name: 'ping', description: 'Botのping値を表示します', usage: '例: /ping', category: 'utility' },
-        { name: 'rolePanel', description: 'ロールを取得できるパネルを作成します', usage: '例: /rolePanel', category: 'utility' },
+        { name: 'rolePanel', description: 'ロールを取得できるパネルを作成します', usage: '例: /rolePanel @user', category: 'utility' },
         { name: 'userInfo', description: 'ユーザーの情報を表示します', usage: '例: /userInfo @user', category: 'utility' },
         { name: 'admin mode', description: '※Bot管理者専用 | Botのモードを選択します', usage: '例: /admin mode', category: 'moderation' },
-        { name: 'role create', description: 'ロールの作成コマンド | めっちゃBeta版', usage: '例: /role create "New Role"', category: 'moderation' },
+        { name: 'role create', description: 'ロールの作成コマンド | めっちゃBeta版', usage: '例: /role create', category: 'moderation' },
         // ここに他のコマンドを追加
     ];
 
