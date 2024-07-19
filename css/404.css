@@ -1,0 +1,86 @@
+/* ベーススタイル */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #2c2c2c;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+}
+
+.content {
+    text-align: center;
+    padding: 20px;
+}
+
+/* アニメーションのスタイル */
+.animated-text {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease forwards;
+}
+
+.animated-link {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ナビゲーションメニューのスタイル */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #3b5998;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #1e3a5f;
+}
+
+/* エラーメッセージのスタイル */
+#error-message {
+    margin-top: 20px;
+}
+
+#error-message h2 {
+    margin-bottom: 20px;
+}
+
+#error-message p {
+    margin-bottom: 20px;
+}
+
+.fun-text {
+    margin-top: 20px;
+    font-style: italic;
+}
+
+/* 背景アニメーションのスタイル */
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+}

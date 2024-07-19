@@ -1,41 +1,48 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>Github Pages Rewrite</title>
-<meta charset="utf-8">
-<meta name="description" content="">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="style.css">
-<script>
-
-  /*
-   * Config
-   */
-  var redirect_file_name = 'index.html';
-  var parameter_key = 'post_id';
-
-
-  /*
-   * Env
-   */
-  var path_name = window.location.pathname;
-
-
-  /*
-   * Process
-   * (Redirect)
-   */
-  var match_condition = new RegExp(redirect_file_name.replace('.html', '') + '/[a-z0-9-_]+$');
-  if (permalink = path_name.match(match_condition))
-  {
-    location.href = path_name.replace(permalink, '') + redirect_file_name + '?' + parameter_key + '=' + permalink[0].replace(/post\//, '');
-  }
-
-</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ページが見つかりません - Silfy</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/404.css">
+    <script src="js/main.js" defer></script>
+    <script src="js/404.js" defer></script>
+    <link rel="shortcut icon" href="assets/images/icon.jpg" type="image/x-icon">
+    <link rel="apple-touch-icon" href="assets/images/icon.jpg" sizes="180x180">
+    <link rel="icon" type="image/png" href="assets/images/icon.jpg" sizes="192x192">
 </head>
 <body>
-  <h1>Github Pages Rewrite</h1>
-  <h2>404 Not Found.</h2>
+    <div class="loader"></div>
+    <div class="background">
+        <div class="stars"></div>
+        <div class="twinkling"></div>
+    </div>
+    <div class="content-wrapper">
+        <div class="content">
+            <header>
+                <h1 class="animated-text">404 - ページが見つかりません</h1>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="command.html">Command</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <main>
+                <section id="error-message">
+                    <h2 class="animated-text">お探しのページは見つかりませんでした。</h2>
+                    <p class="animated-text">申し訳ありませんが、お探しのページは存在しないか、削除された可能性があります。</p>
+                    <p class="animated-text"><a href="index.html" class="animated-link">ホームページに戻る</a></p>
+                    <p class="fun-text animated-text">「404 Not Found」って、まるでお宝探しの終わりのようですね。</p>
+                    <p class="fun-text animated-text">もう少し頑張って探してみませんか？</p>
+                </section>
+            </main>
+            <footer>
+                <p>2024©Silfy | <a href="privacy.html">プライバシポリシー</a></p>
+            </footer>
+        </div>
+    </div>
 </body>
 </html>
