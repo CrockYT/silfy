@@ -8,17 +8,25 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const commands = [
         { name: 'help', description: 'Botのコマンド情報とか色々入れます', usage: '例: /help', category: 'utility' },
-        { name: 'roll', description: '指定した数値の中でランダムで数字を出します', usage: '例: /roll 10', category: 'utility' },
-        { name: 'temp-voice setup', description: '一時使用可能なボイスチャンネルのセットアップを実行します', usage: '例: /temp-voice setup', category: 'utility' },
-        { name: 'moderate deletion', description: '指定分のメッセージを削除します', usage: '例: /moderate deletion 10', category: 'moderation' },
-        { name: 'moderate nuke', description: '同チャンネルのメッセージを全て削除します', usage: '例: /moderate nuke', category: 'moderation' },
-        { name: 'config default-role', description: '自動ロールのコンフィグです', usage: '例: /config default-role', category: 'moderation' },
-        { name: 'config add default-role', description: '鯖に入ったときに自動で付けるロールを設定できます', usage: '例: /config add default-role @member', category: 'moderation' },
+        { name: 'roll', description: '指定した数値の中でランダムで数字を出します', usage: '例: /roll 10', category: 'play' },
+        { name: 'temp-voice setup', description: '一時使用可能なボイスチャンネルのセットアップを実行します', usage: '例: /temp-voice setup', category: 'moderation' },
+        { name: 'moderate deletion', description: '指定分のメッセージを削除します', usage: '例: /moderate deletion 10', category: 'manage' },
+        { name: 'moderate nuke', description: '同チャンネルのメッセージを全て削除します', usage: '例: /moderate nuke', category: 'manage' },
+        { name: 'config default-role', description: '自動ロールのコンフィグです', usage: '例: /config default-role true', category: 'setting' },
+        { name: 'config add default-role', description: '鯖に入ったときに自動で付けるロールを設定できます', usage: '例: /config add default-role @role', category: 'manage' },
+        { name: 'config join-leave-alert', description: '鯖参加 退出時のアラートのコンフィグです', usage: '例: /config join-leave-alert true', category: 'setting' },
+        { name: 'config add join-alert', description: '鯖に参加した時のアラートを送信するチャンネル、また送信形式を設定できます', usage: '例: /config add join-alert #join', category: 'manage' },
         { name: 'ping', description: 'Botのping値を表示します', usage: '例: /ping', category: 'utility' },
-        { name: 'rolePanel', description: 'ロールを取得できるパネルを作成します', usage: '例: /rolePanel @user', category: 'utility' },
-        { name: 'userInfo', description: 'ユーザーの情報を表示します', usage: '例: /userInfo @user', category: 'utility' },
+        { name: 'rolePanel', description: 'ロールを取得できるパネルを作成します', usage: '例: /rolePanel @user', category: 'setting' },
+        { name: 'userInfo', description: 'ユーザーの情報を表示します', usage: '例: /userInfo @user', category: 'manage' },
         { name: 'admin mode', description: '※Bot管理者専用 | Botのモードを選択します', usage: '例: /admin mode', category: 'moderation' },
-        { name: 'role create', description: 'ロールの作成コマンド | めっちゃBeta版', usage: '例: /role create', category: 'moderation' },
+        { name: 'role create', description: 'ロールの作成コマンド | めっちゃBeta版', usage: '例: /role create', category: 'setting' },
+        { name: 'verify-panel', description: '認証パネルを作成します。画像認証に関しては画像は追加されます', usage: '例: /verift-panel @role', category: 'manage' },
+        { name: 'balance', description: '現在の所持金を確認できます。使い道は考え中', usage: '例: /balance', category: 'play' },
+        { name: 'daily-get', description: 'デイリーをもらえます。所持金に追加されます。はい', usage: '例: /daily-get', category: 'play' },
+        { name: 'info update', description: 'アップデート情報を取得します', usage: '例: /info update', category: 'utility' },
+        { name: 'approval create', description: 'ランダムのIDを作成しID入力後報酬を取得します', usage: '例: /approval create', category: 'utility' },
+        { name: 'redeem', description: 'IDを入力して報酬を獲得します', usage: '例: /redeem', category: 'utility' }
         // ここに他のコマンドを追加
     ];
 
